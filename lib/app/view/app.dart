@@ -1,5 +1,5 @@
-import 'package:find_people_near_me/counter/counter.dart';
 import 'package:find_people_near_me/l10n/l10n.dart';
+import 'package:find_people_near_me/onboarding/counter.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const OnboardingPage(),
     );
   }
 }

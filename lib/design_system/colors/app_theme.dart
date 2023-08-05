@@ -1,5 +1,5 @@
-import 'package:find_people_near_me/design_system/text_styles/app_colors_extension.dart';
-import 'package:find_people_near_me/design_system/text_styles/app_pallete.dart';
+import 'package:find_people_near_me/design_system/colors/app_colors_extension.dart';
+import 'package:find_people_near_me/design_system/colors/app_pallete.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -14,25 +14,26 @@ class AppTheme {
   );
 
   static final _lightAppColors = AppColorsExtension(
-    tealPrimary: AppPalette.teal.teal800,
-    textPrimary: AppPalette.neutral.neutral900,
-    grayDark: AppPalette.neutral.neutral500,
-    grayLighter: AppPalette.neutral.neutral400,
-    disabled: AppPalette.neutral.neutral400,
-    grayMedium: AppPalette.neutral.neutral200,
-    grayLight: AppPalette.neutral.neutral100,
-    grayLightest: AppPalette.neutral.neutral50,
-    danger: AppPalette.red.red400,
-    redDark: AppPalette.red.red500,
-    redMedium: AppPalette.red.red200,
-    redLight: AppPalette.red.red100,
-    redLightest: AppPalette.red.red50,
-    success: AppPalette.green.green700,
-    greenDark: AppPalette.green.green500,
-    greenMedium: AppPalette.green.green200,
-    greenLight: AppPalette.green.green100,
-    greenLightest: AppPalette.green.green50,
-  );
+      tealPrimary: AppPalette.teal.teal800,
+      textPrimary: AppPalette.neutral.neutral900,
+      grayDark: AppPalette.neutral.neutral500,
+      grayLighter: AppPalette.neutral.neutral400,
+      disabled: AppPalette.neutral.neutral400,
+      grayMedium: AppPalette.neutral.neutral200,
+      grayLight: AppPalette.neutral.neutral100,
+      grayLightest: AppPalette.neutral.neutral50,
+      danger: AppPalette.red.red400,
+      redDark: AppPalette.red.red500,
+      redMedium: AppPalette.red.red200,
+      redLight: AppPalette.red.red100,
+      redLightest: AppPalette.red.red50,
+      success: AppPalette.green.green700,
+      greenDark: AppPalette.green.green500,
+      greenMedium: AppPalette.green.green200,
+      greenLight: AppPalette.green.green100,
+      greenLightest: AppPalette.green.green50,
+      // Blue
+      blueBackground: AppPalette.blue.blue200);
 
   //
   // Dark theme
@@ -63,6 +64,7 @@ class AppTheme {
     greenLight: AppPalette.green.green500,
     greenLightest: AppPalette.green.green50,
     grayLighter: AppPalette.neutral.neutral400,
+    blueBackground: AppPalette.blue.blue200,
   );
 }
 

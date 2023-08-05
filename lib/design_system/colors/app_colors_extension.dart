@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
 
 class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
+  AppColorsExtension(
+      {required this.tealPrimary,
+      required this.textPrimary,
+      required this.grayDark,
+      required this.grayMedium,
+      required this.disabled,
+      required this.grayLight,
+      required this.grayLighter,
+      required this.grayLightest,
+      required this.danger,
+      required this.redDark,
+      required this.redMedium,
+      required this.redLight,
+      required this.redLightest,
+      required this.success,
+      required this.greenDark,
+      required this.greenMedium,
+      required this.greenLight,
+      required this.greenLightest,
+      required this.blueBackground});
   // Teal
   final Color tealPrimary;
 
@@ -27,26 +47,8 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
   final Color greenLight;
   final Color greenLightest;
 
-  AppColorsExtension({
-    required this.tealPrimary,
-    required this.textPrimary,
-    required this.grayDark,
-    required this.grayMedium,
-    required this.disabled,
-    required this.grayLight,
-    required this.grayLighter,
-    required this.grayLightest,
-    required this.danger,
-    required this.redDark,
-    required this.redMedium,
-    required this.redLight,
-    required this.redLightest,
-    required this.success,
-    required this.greenDark,
-    required this.greenMedium,
-    required this.greenLight,
-    required this.greenLightest,
-  });
+  // Blue
+  final Color blueBackground;
 
   @override
   ThemeExtension<AppColorsExtension> copyWith({
@@ -86,6 +88,9 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
     Color? greenMedium,
     Color? greenLight,
     Color? greenLightest,
+
+    // BLue
+    Color? blueBackground,
   }) {
     return AppColorsExtension(
       tealPrimary: tealPrimary ?? this.tealPrimary,
@@ -106,6 +111,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       greenLight: greenLight ?? this.greenLight,
       greenLightest: greenLight ?? this.greenLightest,
       grayLighter: grayLighter ?? this.grayLighter,
+      blueBackground: blueBackground ?? this.blueBackground,
     );
   }
 
@@ -137,6 +143,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       greenLight: Color.lerp(greenLight, other.greenLight, t)!,
       greenLightest: Color.lerp(greenLight, other.greenLightest, t)!,
       grayLighter: Color.lerp(grayLighter, other.grayLighter, t)!,
+      blueBackground: Color.lerp(blueBackground, other.grayLighter, t)!,
     );
   }
 }

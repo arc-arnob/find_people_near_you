@@ -1,5 +1,5 @@
 import 'package:find_people_near_me/app/app.dart';
-import 'package:find_people_near_me/counter/counter.dart';
+import 'package:find_people_near_me/onboarding/counter.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
