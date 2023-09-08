@@ -69,6 +69,7 @@ class _GreenColors {
   final green700 = const Color(0xFF008744);
   final green800 = const Color(0xFF166534);
   final green900 = const Color(0xFF14532D);
+  final green500_1 = const Color(0xFF57CC99);
 }
 
 class _BlueColors {
@@ -84,6 +85,7 @@ class _BlueColors {
   final blue700 = const Color(0xFF1D4ED8);
   final blue800 = const Color(0xFF1E40AF);
   final blue900 = const Color(0xFF1E3A8A);
+  final bluePrimary = const Color(0xFF22577A);
 }
 
 class _YellowColors {

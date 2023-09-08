@@ -20,7 +20,9 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       required this.greenMedium,
       required this.greenLight,
       required this.greenLightest,
-      required this.blueBackground});
+      required this.blueBackground,
+      required this.onboardingScreenBackgroundColor,
+      required this.logoColor});
   // Teal
   final Color tealPrimary;
 
@@ -49,6 +51,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
 
   // Blue
   final Color blueBackground;
+  final Color onboardingScreenBackgroundColor;
+
+  // Logo Color
+  final Color logoColor;
 
   @override
   ThemeExtension<AppColorsExtension> copyWith({
@@ -91,6 +97,10 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
 
     // BLue
     Color? blueBackground,
+    Color? onboardingScreenBackgroundColor,
+
+    // Logo Color
+    Color? logoColor,
   }) {
     return AppColorsExtension(
       tealPrimary: tealPrimary ?? this.tealPrimary,
@@ -112,6 +122,9 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       greenLightest: greenLight ?? this.greenLightest,
       grayLighter: grayLighter ?? this.grayLighter,
       blueBackground: blueBackground ?? this.blueBackground,
+      onboardingScreenBackgroundColor: onboardingScreenBackgroundColor ??
+          this.onboardingScreenBackgroundColor,
+      logoColor: logoColor ?? this.logoColor,
     );
   }
 
@@ -144,6 +157,9 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       greenLightest: Color.lerp(greenLight, other.greenLightest, t)!,
       grayLighter: Color.lerp(grayLighter, other.grayLighter, t)!,
       blueBackground: Color.lerp(blueBackground, other.grayLighter, t)!,
+      onboardingScreenBackgroundColor:
+          Color.lerp(onboardingScreenBackgroundColor, other.grayLighter, t)!,
+      logoColor: Color.lerp(logoColor, other.logoColor, t)!,
     );
   }
 }

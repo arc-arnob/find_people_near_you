@@ -14,26 +14,30 @@ class AppTheme {
   );
 
   static final _lightAppColors = AppColorsExtension(
-      tealPrimary: AppPalette.teal.teal800,
-      textPrimary: AppPalette.neutral.neutral900,
-      grayDark: AppPalette.neutral.neutral500,
-      grayLighter: AppPalette.neutral.neutral400,
-      disabled: AppPalette.neutral.neutral400,
-      grayMedium: AppPalette.neutral.neutral200,
-      grayLight: AppPalette.neutral.neutral100,
-      grayLightest: AppPalette.neutral.neutral50,
-      danger: AppPalette.red.red400,
-      redDark: AppPalette.red.red500,
-      redMedium: AppPalette.red.red200,
-      redLight: AppPalette.red.red100,
-      redLightest: AppPalette.red.red50,
-      success: AppPalette.green.green700,
-      greenDark: AppPalette.green.green500,
-      greenMedium: AppPalette.green.green200,
-      greenLight: AppPalette.green.green100,
-      greenLightest: AppPalette.green.green50,
-      // Blue
-      blueBackground: AppPalette.blue.blue200);
+    tealPrimary: AppPalette.teal.teal800,
+    textPrimary: AppPalette.neutral.neutral900,
+    grayDark: AppPalette.neutral.neutral500,
+    grayLighter: AppPalette.neutral.neutral400,
+    disabled: AppPalette.neutral.neutral400,
+    grayMedium: AppPalette.neutral.neutral200,
+    grayLight: AppPalette.neutral.neutral100,
+    grayLightest: AppPalette.neutral.neutral50,
+    danger: AppPalette.red.red400,
+    redDark: AppPalette.red.red500,
+    redMedium: AppPalette.red.red200,
+    redLight: AppPalette.red.red100,
+    redLightest: AppPalette.red.red50,
+    success: AppPalette.green.green700,
+    greenDark: AppPalette.green.green500,
+    greenMedium: AppPalette.green.green200,
+    greenLight: AppPalette.green.green100,
+    greenLightest: AppPalette.green.green50,
+    // Blue
+    blueBackground: AppPalette.blue.blue200,
+    // Login Screen BG Color
+    onboardingScreenBackgroundColor: AppPalette.green.green500_1,
+    logoColor: AppPalette.blue.bluePrimary,
+  );
 
   //
   // Dark theme
@@ -65,6 +69,8 @@ class AppTheme {
     greenLightest: AppPalette.green.green50,
     grayLighter: AppPalette.neutral.neutral400,
     blueBackground: AppPalette.blue.blue200,
+    onboardingScreenBackgroundColor: AppPalette.green.green500_1,
+    logoColor: AppPalette.blue.bluePrimary,
   );
 }
 
