@@ -11,8 +11,6 @@ abstract class AppPalette {
   static const yellow = _YellowColors();
 }
 
-
-
 class _TealColors {
   const _TealColors();
 
@@ -71,6 +69,7 @@ class _GreenColors {
   final green700 = const Color(0xFF008744);
   final green800 = const Color(0xFF166534);
   final green900 = const Color(0xFF14532D);
+  final green500_1 = const Color(0xFF57CC99);
 }
 
 class _BlueColors {
@@ -78,7 +77,7 @@ class _BlueColors {
 
   final blue50 = const Color(0xFFEFF6FF);
   final blue100 = const Color(0xFFE2F2FE);
-  final blue200 = const Color(0xFFBFDBFE);
+  final blue200 = const Color(0xFFD7E5FF);
   final blue300 = const Color(0xFF93C5FD);
   final blue400 = const Color(0xFF60A5FA);
   final blue500 = const Color(0xFF3B82F6);
@@ -86,6 +85,7 @@ class _BlueColors {
   final blue700 = const Color(0xFF1D4ED8);
   final blue800 = const Color(0xFF1E40AF);
   final blue900 = const Color(0xFF1E3A8A);
+  final bluePrimary = const Color(0xFF22577A);
 }
 
 class _YellowColors {

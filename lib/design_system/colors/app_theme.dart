@@ -1,5 +1,5 @@
-import 'package:find_people_near_me/design_system/text_styles/app_colors_extension.dart';
-import 'package:find_people_near_me/design_system/text_styles/app_pallete.dart';
+import 'package:find_people_near_me/design_system/colors/app_colors_extension.dart';
+import 'package:find_people_near_me/design_system/colors/app_pallete.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -32,6 +32,11 @@ class AppTheme {
     greenMedium: AppPalette.green.green200,
     greenLight: AppPalette.green.green100,
     greenLightest: AppPalette.green.green50,
+    // Blue
+    blueBackground: AppPalette.blue.blue200,
+    // Login Screen BG Color
+    onboardingScreenBackgroundColor: AppPalette.green.green500_1,
+    logoColor: AppPalette.blue.bluePrimary,
   );
 
   //
@@ -63,6 +68,9 @@ class AppTheme {
     greenLight: AppPalette.green.green500,
     greenLightest: AppPalette.green.green50,
     grayLighter: AppPalette.neutral.neutral400,
+    blueBackground: AppPalette.blue.blue200,
+    onboardingScreenBackgroundColor: AppPalette.green.green500_1,
+    logoColor: AppPalette.blue.bluePrimary,
   );
 }
 

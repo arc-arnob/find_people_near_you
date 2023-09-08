@@ -1,5 +1,6 @@
-import 'package:find_people_near_me/counter/counter.dart';
+import 'package:find_people_near_me/design_system/text_styles/app_typography.dart';
 import 'package:find_people_near_me/l10n/l10n.dart';
+import 'package:find_people_near_me/onboarding/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,7 +23,12 @@ class CounterView extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
+      appBar: AppBar(
+        title: Text(
+          l10n.counterAppBarTitle,
+          style: AppTypography.headingMedium,
+        ),
+      ),
       body: const Center(child: CounterText()),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
