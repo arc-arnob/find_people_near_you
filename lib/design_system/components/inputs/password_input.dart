@@ -1,14 +1,13 @@
 import 'package:find_people_near_me/design_system/colors/app_theme.dart';
 import 'package:flutter/material.dart';
 
-class EmailInput extends StatelessWidget {
-  const EmailInput({
+class PasswordInput extends StatelessWidget {
+  const PasswordInput({
     required this.controller,
     required this.labelText,
     required this.hintText,
     super.key,
   });
-
   final TextEditingController controller;
   final String labelText;
   final String hintText;
@@ -17,7 +16,7 @@ class EmailInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      keyboardType: TextInputType.emailAddress,
+      obscureText: true, // This hides the entered text
       style: const TextStyle(fontSize: 20),
       decoration: InputDecoration(
         labelText: labelText,
@@ -42,9 +41,9 @@ class EmailInput extends StatelessWidget {
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Please enter your email';
+          return 'Please enter your password';
         }
-        // You can add additional email validation logic here if needed.
+        // You can add additional password validation logic here if needed.
         return null;
       },
     );

@@ -1,4 +1,9 @@
 import 'package:find_people_near_me/design_system/colors/app_theme.dart';
+import 'package:find_people_near_me/design_system/components/buttons/app_button_1.dart';
+import 'package:find_people_near_me/design_system/components/buttons/app_button_2.dart';
+import 'package:find_people_near_me/design_system/components/inputs/email_input.dart';
+import 'package:find_people_near_me/design_system/components/inputs/password_input.dart';
+import 'package:find_people_near_me/design_system/components/spacings/px_48.dart';
 import 'package:find_people_near_me/design_system/text_styles/app_typography.dart';
 import 'package:flutter/material.dart';
 
@@ -13,19 +18,28 @@ class OnboardingPage extends StatelessWidget {
       backgroundColor: context.theme.appColors.onboardingScreenBackgroundColor,
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 27),
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Heading
               const LoginPageHeading(),
-              const SizedBox(
-                height: 58,
-              ),
-              SignUpForm(
-                emailController: emailController,
-                passwordController: passwordController,
-              ),
+              const Px48(),
+              Column(
+                children: [
+                  SignUpForm(
+                    emailController: emailController,
+                    passwordController: passwordController,
+                  ),
+                  const Px48(),
+                  AppButton2(
+                    onPressed: () {},
+                    text: 'Log in',
+                  ),
+                  const Px48(),
+                  AppButton1(onPressed: () => ()),
+                ],
+              )
             ],
 
             // Email Input
@@ -33,6 +47,7 @@ class OnboardingPage extends StatelessWidget {
             // Forgot Password
             // Login Button
             // Sign Up Button
+            // Social Button
           ),
         ),
       ),
@@ -97,95 +112,6 @@ class SignUpForm extends StatelessWidget {
           hintText: 'Password where?',
         ),
       ],
-    );
-  }
-}
-
-// TODO: MOVE to Components Folder
-class EmailInput extends StatelessWidget {
-  const EmailInput({
-    required this.controller,
-    required this.labelText,
-    required this.hintText,
-    super.key,
-  });
-
-  final TextEditingController controller;
-  final String labelText;
-  final String hintText;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        labelText: labelText,
-        hintText: hintText,
-        labelStyle: TextStyle(
-          color: context.theme.appColors.logoColor, // Customize the label color
-        ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 22),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(100),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide:
-              BorderSide(color: context.theme.appColors.logoColor, width: 2),
-          borderRadius: BorderRadius.circular(100),
-        ),
-      ),
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'Please enter your email';
-        }
-        // You can add additional email validation logic here if needed.
-        return null;
-      },
-    );
-  }
-}
-
-// TODO: MOVE to Components Folder
-class PasswordInput extends StatelessWidget {
-  const PasswordInput({
-    required this.controller,
-    required this.labelText,
-    required this.hintText,
-    super.key,
-  });
-  final TextEditingController controller;
-  final String labelText;
-  final String hintText;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      obscureText: true, // This hides the entered text
-      decoration: InputDecoration(
-        labelText: labelText,
-        hintText: hintText,
-        labelStyle: TextStyle(
-          color: context.theme.appColors.logoColor, // Customize the label color
-        ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 22),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(100),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide:
-              BorderSide(color: context.theme.appColors.logoColor, width: 2),
-          borderRadius: BorderRadius.circular(100),
-        ),
-      ),
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'Please enter your password';
-        }
-        // You can add additional password validation logic here if needed.
-        return null;
-      },
     );
   }
 }

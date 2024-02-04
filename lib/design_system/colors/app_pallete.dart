@@ -9,6 +9,12 @@ abstract class AppPalette {
   static const green = _GreenColors();
   static const blue = _BlueColors();
   static const yellow = _YellowColors();
+  static const brand = _BrandColors();
+}
+
+class _BrandColors {
+  const _BrandColors();
+  final buttonPrimary = const Color(0xFF22577A);
 }
 
 class _TealColors {

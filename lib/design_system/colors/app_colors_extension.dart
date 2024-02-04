@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 
 class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
-  AppColorsExtension(
-      {required this.tealPrimary,
-      required this.textPrimary,
-      required this.grayDark,
-      required this.grayMedium,
-      required this.disabled,
-      required this.grayLight,
-      required this.grayLighter,
-      required this.grayLightest,
-      required this.danger,
-      required this.redDark,
-      required this.redMedium,
-      required this.redLight,
-      required this.redLightest,
-      required this.success,
-      required this.greenDark,
-      required this.greenMedium,
-      required this.greenLight,
-      required this.greenLightest,
-      required this.blueBackground,
-      required this.onboardingScreenBackgroundColor,
-      required this.logoColor});
+  AppColorsExtension({
+    required this.tealPrimary,
+    required this.textPrimary,
+    required this.grayDark,
+    required this.grayMedium,
+    required this.disabled,
+    required this.grayLight,
+    required this.grayLighter,
+    required this.grayLightest,
+    required this.danger,
+    required this.redDark,
+    required this.redMedium,
+    required this.redLight,
+    required this.redLightest,
+    required this.success,
+    required this.greenDark,
+    required this.greenMedium,
+    required this.greenLight,
+    required this.greenLightest,
+    required this.blueBackground,
+    required this.onboardingScreenBackgroundColor,
+    required this.logoColor,
+    required this.buttonPrimary,
+  });
   // Teal
   final Color tealPrimary;
 
@@ -55,6 +57,8 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
 
   // Logo Color
   final Color logoColor;
+  // Brand Colors
+  final Color buttonPrimary;
 
   @override
   ThemeExtension<AppColorsExtension> copyWith({
@@ -101,6 +105,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
 
     // Logo Color
     Color? logoColor,
+    Color? buttonPrimary,
   }) {
     return AppColorsExtension(
       tealPrimary: tealPrimary ?? this.tealPrimary,
@@ -125,6 +130,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       onboardingScreenBackgroundColor: onboardingScreenBackgroundColor ??
           this.onboardingScreenBackgroundColor,
       logoColor: logoColor ?? this.logoColor,
+      buttonPrimary: buttonPrimary ?? this.buttonPrimary,
     );
   }
 
@@ -160,6 +166,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
       onboardingScreenBackgroundColor:
           Color.lerp(onboardingScreenBackgroundColor, other.grayLighter, t)!,
       logoColor: Color.lerp(logoColor, other.logoColor, t)!,
+      buttonPrimary: Color.lerp(buttonPrimary, other.buttonPrimary, t)!,
     );
   }
 }

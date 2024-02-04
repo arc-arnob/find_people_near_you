@@ -37,6 +37,7 @@ class AppTheme {
     // Login Screen BG Color
     onboardingScreenBackgroundColor: AppPalette.green.green500_1,
     logoColor: AppPalette.blue.bluePrimary,
+    buttonPrimary: AppPalette.brand.buttonPrimary,
   );
 
   //
@@ -71,6 +72,7 @@ class AppTheme {
     blueBackground: AppPalette.blue.blue200,
     onboardingScreenBackgroundColor: AppPalette.green.green500_1,
     logoColor: AppPalette.blue.bluePrimary,
+    buttonPrimary: AppPalette.brand.buttonPrimary,
   );
 }
 
